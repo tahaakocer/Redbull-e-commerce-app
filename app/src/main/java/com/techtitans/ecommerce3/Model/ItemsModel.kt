@@ -12,6 +12,7 @@ data class ItemsModel(
     var rating: Double = 0.0,
     var numberInCart: Int = 0,
     var sellerName: String = "",
+    var sellerTell: String = "",
     var stock: Int = 0
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
@@ -21,6 +22,7 @@ data class ItemsModel(
         parcel.readDouble(),
         parcel.readDouble(),
         parcel.readInt(),
+        parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readInt()
     )
@@ -33,6 +35,7 @@ data class ItemsModel(
         parcel.writeDouble(rating)
         parcel.writeInt(numberInCart)
         parcel.writeString(sellerName)
+        parcel.writeString(sellerTell)
         parcel.writeInt(stock)
     }
 

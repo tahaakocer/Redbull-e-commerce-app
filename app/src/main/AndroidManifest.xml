@@ -23,6 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.DetailActivity">
+            <!-- Gerekli diğer özellikler -->
+        </activity>
+        <activity android:name=".Activity.IntroActivity">
+            <!-- Gerekli diğer özellikler -->
+        </activity>
+
     </application>
 
 </manifest>

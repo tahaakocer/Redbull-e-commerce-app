@@ -105,7 +105,7 @@ class MainViewModel {
                     val productList = response.body()
                     productList?.let {
                         for (product in productList) {
-                          val itemModel = ItemsModel(product.title,product.description,product.thumbnail,product.price,product.rating,0,"RedBull",product.stock)
+                            val itemModel = ItemsModel(product.title,product.description,product.thumbnail,product.price,product.rating,0,"RedBull",product.sellerTell,product.stock)
                             itemsModelList.add(itemModel)
                         }
                         _bestSeller.value = itemsModelList

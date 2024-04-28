@@ -10,5 +10,7 @@ data class Product(
     val stock: Int,
     val brand: String,
     val thumbnail: String,
+    val sellerName: String,
+    val sellerTell: String,
     val categoryId: Int,
 )

@@ -101,13 +101,6 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/picSeller"
-                    android:layout_width="60dp"
-                    app:shapeAppearanceOverlay="@style/CircleImageView"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/profile" />
-
                 <TextView
                     android:id="@+id/SellerNameTxt"
                     android:layout_width="wrap_content"
@@ -139,32 +132,23 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
+                android:gravity="end"
                 android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Select Size"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:id="@+id/imageView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                   android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="8dp"
                     app:srcCompat="@drawable/star" />
 
                 <TextView
                     android:id="@+id/ratingTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                   android:textColor="@color/black"
-                    android:text="0" />
+                    android:text="0"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -191,15 +175,15 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/AddToCartBtn"
-                    android:layout_width="wrap_content"
-                    android:background="@drawable/green_bg"
                     style="@android:style/Widget.Button"
-                   android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark"
                     android:text="Add to Cart"
                     android:textColor="@color/white"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <ImageButton
                     android:id="@+id/CartBtn"
