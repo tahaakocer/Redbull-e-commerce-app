@@ -1,5 +1,6 @@
 package com.techtitans.ecommerce3.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
@@ -38,6 +39,7 @@ class MainActivity : BaseActivity() {
         initBanners()
         initCategories()
         initBestSeller()
+        bottomNavigation()
 
         val retrofit = Retrofit.Builder()
             .baseUrl("http://93.95.26.208:8080/api/") // API'nin temel URL'si
@@ -73,6 +75,13 @@ class MainActivity : BaseActivity() {
         })
 
     }
+
+    private fun bottomNavigation() {
+        binding.cartBtn.setOnClickListener{
+            startActivity(Intent(this@MainActivity,CartActivity::class.java))
+        }
+    }
+
     private fun initBestSeller() {
         binding.progressBarBestSeller.visibility=View.VISIBLE
         viewModel.bestSeller.observe(this, Observer {

@@ -84,15 +84,15 @@
                     android:background="#00ffffff"/>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    style="@android:style/Widget.Button"
-                    android:background="@drawable/green_bg"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
                     android:id="@+id/applyCopoun"
+                    style="@android:style/Widget.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="Apply" />
+                    android:background="@android:color/holo_red_dark"
+                    android:text="Apply"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -136,7 +136,7 @@
                     android:id="@+id/totalFeeTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$-"
+                    android:text="₺-"
                     android:textColor="@color/green"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -148,7 +148,7 @@
                     android:id="@+id/deliveryTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$-"
+                    android:text="₺-"
                     android:textColor="@color/green"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -160,7 +160,7 @@
                     android:id="@+id/taxTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$-"
+                    android:text="₺-"
                     android:textColor="@color/green"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -193,7 +193,7 @@
                     android:id="@+id/totalTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$-"
+                    android:text="₺-"
                     android:textColor="@color/green"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -205,16 +205,16 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/checkOutBtn"
-                android:background="@drawable/green_bg"
                 style="@android:style/Widget.Button"
-                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
+                android:background="@android:color/holo_red_dark"
                 android:text="Check Out"
-                android:textSize="18sp"/>
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </ScrollView>

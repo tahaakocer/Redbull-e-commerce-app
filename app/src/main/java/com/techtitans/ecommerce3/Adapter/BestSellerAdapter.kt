@@ -32,7 +32,7 @@ class BestSellerAdapter(val items: MutableList<ItemsModel>) :
 
     override fun onBindViewHolder(holder: BestSellerAdapter.Viewholder, position: Int) {
         holder.binding.titleTxt.text = items[position].title
-        holder.binding.priceTxt.text = "$" + items[position].price.toString()
+        holder.binding.priceTxt.text = "₺" + items[position].price.toString()
         holder.binding.ratingTxt.text = items[position].rating.toString()
 
         val requestOption = RequestOptions().transform(CenterCrop())

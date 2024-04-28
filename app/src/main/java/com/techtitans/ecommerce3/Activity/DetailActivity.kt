@@ -28,23 +28,6 @@ class DetailActivity : BaseActivity() {
         getBundle()
 
     }
-
-    private fun initList() {
-
-        val colorList = ArrayList<String>()
-        for (imageUrl in item.thumbnail) {
-            colorList.add(imageUrl)
-        }
-
-        Glide.with(this)
-            .load(colorList[0])
-            .into(binding.picMain)
-
-        binding.picList.adapter = PicListAdapter(colorList, binding.picMain)
-        binding.picList.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-    }
-
     private fun getBundle() {
         item = intent.getParcelableExtra("object")!!
         binding.titleTxt.text = item.title
@@ -53,6 +36,10 @@ class DetailActivity : BaseActivity() {
         binding.ratingTxt.text = "${item.rating} Rating"
         binding.SellerNameTxt.text = item.sellerName
 
+        Glide.with(this)
+            .load(item.thumbnail)
+            .into(binding.picMain)
+
 
         binding.AddToCartBtn.setOnClickListener {
             item.numberInCart = numberOrder
@@ -60,8 +47,7 @@ class DetailActivity : BaseActivity() {
         }
         binding.backBtn.setOnClickListener { finish() }
         binding.CartBtn.setOnClickListener {
-
-            //silme işlemi
+            startActivity(Intent(this@DetailActivity,CartActivity::class.java))
         }
         binding.msgToSellerBtn.setOnClickListener {
             val sendIntent = Intent(Intent.ACTION_VIEW)

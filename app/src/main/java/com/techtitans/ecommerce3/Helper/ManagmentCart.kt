@@ -12,17 +12,17 @@ class ManagmentCart(val context: Context) {
     private val tinyDB = TinyDB(context)
 
     fun insertItems(item: ItemsModel) {
-        var listItem = getListCart()
-        val existAlready = listItem.any { it.title == item.title }
-        val index = listItem.indexOfFirst { it.title == item.title }
+        var listFood = getListCart()
+        val existAlready = listFood.any { it.title == item.title }
+        val index = listFood.indexOfFirst { it.title == item.title }
 
         if (existAlready) {
-            listItem[index].numberInCart = item.numberInCart
+            listFood[index].numberInCart = item.numberInCart
         } else {
-            listItem.add(item)
+            listFood.add(item)
         }
-        tinyDB.putListObject("CartList", listItem)
-        Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show()
+        tinyDB.putListObject("CartList", listFood)
+        Toast.makeText(context, "Sepete Eklendi", Toast.LENGTH_SHORT).show()
     }
 
     fun getListCart(): ArrayList<ItemsModel> {
@@ -46,9 +46,9 @@ class ManagmentCart(val context: Context) {
     }
 
     fun getTotalFee(): Double {
-        val listItem = getListCart()
+        val listFood = getListCart()
         var fee = 0.0
-        for (item in listItem) {
+        for (item in listFood) {
             fee += item.price * item.numberInCart
         }
         return fee

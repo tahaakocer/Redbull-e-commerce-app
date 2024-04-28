@@ -29,6 +29,10 @@
         <activity android:name=".Activity.IntroActivity">
             <!-- Gerekli diğer özellikler -->
         </activity>
+        <activity android:name=".Activity.CartActivity">
+            <!-- Gerekli diğer özellikler -->
+        </activity>
+
 
     </application>
 
