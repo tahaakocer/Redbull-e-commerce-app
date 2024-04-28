@@ -21,7 +21,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/green_bg2"
+                android:background="@android:color/holo_red_dark"
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -253,7 +253,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_gravity="bottom"
-            android:background="@drawable/green_bg">
+            android:background="@android:color/holo_red_dark">
 
             <LinearLayout
                 android:layout_width="match_parent"
