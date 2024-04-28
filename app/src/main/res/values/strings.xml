@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">project180</string>
+    <string name="intro_title"><font color="#000000">Unveiling a World</font> \n<font color="#008b86">Toys &amp; Accessories &amp; Foods</font> \n<font color="#000000">For Your Pet</font></string>
+    <string name="intro_text">Browse the latest styles from top brands\nGet personalized recommendations\nEnjoy fast, free shipping</string>
+    <string name="intro_signin">Already have an account?<font color="#008b86"> Sign In</font></string>
+</resources>
