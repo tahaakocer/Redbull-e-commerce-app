@@ -2,6 +2,7 @@ package com.techtitans.ecommerce3.Activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project1762.Helper.ManagmentCart
 import com.techtitans.ecommerce3.Adapter.CartAdapter
@@ -12,6 +13,7 @@ class CartActivity : BaseActivity() {
     private lateinit var binding: ActivityCartBinding
     private lateinit var managmentCart: ManagmentCart
     private var tax: Double = 0.0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCartBinding.inflate(layoutInflater)
@@ -23,7 +25,13 @@ class CartActivity : BaseActivity() {
         initCartList()
         calculateCart()
 
-        binding.checkOutBtn.setOnClickListener{
+        binding.checkOutBtn.setOnClickListener {
+
+            managmentCart.clearCart()
+
+            initCartList()
+
+            calculateCart()
 
         }
     }

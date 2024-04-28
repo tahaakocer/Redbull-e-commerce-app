@@ -29,6 +29,7 @@ class CartAdapter(
         return ViewHolder(binding)
     }
 
+
     override fun onBindViewHolder(holder: CartAdapter.ViewHolder, position: Int) {
         val item = listItemSelected[position]
 
