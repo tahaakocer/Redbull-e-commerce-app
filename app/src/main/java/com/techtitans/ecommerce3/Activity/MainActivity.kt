@@ -80,6 +80,18 @@ class MainActivity : BaseActivity() {
         binding.cartBtn.setOnClickListener{
             startActivity(Intent(this@MainActivity,CartActivity::class.java))
         }
+        binding.productsBtn.setOnClickListener{
+            startActivity(Intent(this@MainActivity,ProductsActivity::class.java))
+
+        }
+        binding.seeAllBtn.setOnClickListener{
+            startActivity(Intent(this@MainActivity,ProductsActivity::class.java))
+
+        }
+        binding.explorerBtn.setOnClickListener{
+            startActivity(Intent(this@MainActivity,ProductsActivity::class.java))
+
+        }
     }
 
     private fun initBestSeller() {
