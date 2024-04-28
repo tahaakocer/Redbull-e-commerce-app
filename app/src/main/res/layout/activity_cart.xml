@@ -46,10 +46,10 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Cart"
-                    android:textStyle="bold"
+                    android:text="Sepetim"
                     android:textColor="@color/black"
                     android:textSize="25sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/backBtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -75,13 +75,13 @@
                     android:id="@+id/copounEdt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:paddingStart="8dp"
                     android:layout_weight="1"
-                    android:textSize="14sp"
+                    android:background="#00ffffff"
                     android:ems="10"
+                    android:hint="Kuponunuzu Giriniz"
                     android:inputType="text"
-                    android:hint="Enter Your Copoun"
-                    android:background="#00ffffff"/>
+                    android:paddingStart="8dp"
+                    android:textSize="14sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/applyCopoun"
@@ -90,7 +90,7 @@
                     android:layout_height="38dp"
                     android:layout_weight="1"
                     android:background="@android:color/holo_red_dark"
-                    android:text="Apply"
+                    android:text="Onayla"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -104,7 +104,7 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Subtotal"
+                    android:text="Ara Toplam"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Delivery"
+                    android:text="Kargo Hizmeti"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Total Tax"
+                    android:text="Toplam Vergi"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +212,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@android:color/holo_red_dark"
-                android:text="Check Out"
+                android:text="Ödemeye Geç"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 

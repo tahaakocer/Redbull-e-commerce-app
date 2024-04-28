@@ -32,7 +32,7 @@ class DetailActivity : BaseActivity() {
         item = intent.getParcelableExtra("object")!!
         binding.titleTxt.text = item.title
         binding.descriptionTxt.text = item.description
-        binding.priceTxt.text = "TL" + item.price
+        binding.priceTxt.text = "₺" + item.price
         binding.ratingTxt.text = "${item.rating} Rating"
         binding.SellerNameTxt.text = item.sellerName
 

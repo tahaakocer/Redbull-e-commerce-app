@@ -30,19 +30,17 @@ class CartAdapter(
     }
 
     override fun onBindViewHolder(holder: CartAdapter.ViewHolder, position: Int) {
-
         val item = listItemSelected[position]
 
         holder.binding.TitleTxt.text = item.title
         holder.binding.feeEachItem.text = "₺${item.price}"
-        holder.binding.totalEachItem.text = "₺${item.numberInCart * item.price}"
+        holder.binding.totalEachItem.text = "₺${Math.round(item.numberInCart * item.price)}"
         holder.binding.numberItemTxt.text=item.numberInCart.toString()
 
         Glide.with(holder.itemView.context)
             .load(item.thumbnail)
             .apply(RequestOptions().transform(CenterCrop()))
             .into(holder.binding.picCart)
-
 
         holder.binding.plusCartBtn.setOnClickListener {
             managmentCart.plusItem(listItemSelected,position,object :ChangeNumberItemsListener{
@@ -64,5 +62,5 @@ class CartAdapter(
         }
     }
 
-    override fun getItemCount(): Int = 0
+    override fun getItemCount(): Int = listItemSelected.size
 }
