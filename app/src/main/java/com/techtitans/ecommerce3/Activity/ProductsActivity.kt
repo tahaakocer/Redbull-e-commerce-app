@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.techtitans.ecommerce3.Adapter.BestSellerAdapter
 import com.techtitans.ecommerce3.R
 import com.techtitans.ecommerce3.ViewModel.MainViewModel
-import com.techtitans.ecommerce3.databinding.ActivityMainBinding
 import com.techtitans.ecommerce3.databinding.ActivityProductsBinding
 
 class ProductsActivity : AppCompatActivity() {

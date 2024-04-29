@@ -4,18 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.techtitans.ecommerce3.Adapter.AthleteApadter
-import com.techtitans.ecommerce3.Adapter.BestSellerAdapter
 import com.techtitans.ecommerce3.R
 import com.techtitans.ecommerce3.ViewModel.MainViewModel
 import com.techtitans.ecommerce3.databinding.ActivityAthleteBinding
-import com.techtitans.ecommerce3.databinding.ActivityIntroBinding
-import com.techtitans.ecommerce3.databinding.ActivityProductsBinding
 
 class AthleteActivity : BaseActivity() {
 

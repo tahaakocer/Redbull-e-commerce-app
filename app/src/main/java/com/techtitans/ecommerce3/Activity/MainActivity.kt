@@ -6,17 +6,13 @@ import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
-import com.techtitans.ecommerce3.API.BannerService
 import com.techtitans.ecommerce3.API.CategoryService
 import com.techtitans.ecommerce3.Adapter.BestSellerAdapter
 import com.techtitans.ecommerce3.Adapter.CategoryAdapter
-
 import com.techtitans.ecommerce3.Adapter.SliderAdapter
-import com.techtitans.ecommerce3.Model.Banner
 import com.techtitans.ecommerce3.Model.Category
 import com.techtitans.ecommerce3.Model.SliderModel
 import com.techtitans.ecommerce3.ViewModel.MainViewModel
