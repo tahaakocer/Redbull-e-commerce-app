@@ -92,6 +92,11 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this@MainActivity,ProductsActivity::class.java))
 
         }
+        binding.AthleteBtn.setOnClickListener{
+            startActivity(Intent(this@MainActivity,AthleteActivity::class.java))
+
+        }
+
     }
 
     private fun initBestSeller() {

@@ -2,10 +2,13 @@ package com.techtitans.ecommerce3.ViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.techtitans.ecommerce3.API.AtletService
 import com.techtitans.ecommerce3.API.BannerService
 import com.techtitans.ecommerce3.API.CategoryService
 import com.techtitans.ecommerce3.API.ProductService
 import com.techtitans.ecommerce3.Client.RetrofitClient
+import com.techtitans.ecommerce3.Model.Atlet
+import com.techtitans.ecommerce3.Model.AtletModel
 
 import com.techtitans.ecommerce3.Model.Banner
 import com.techtitans.ecommerce3.Model.Category
@@ -27,11 +30,13 @@ class MainViewModel {
     private val _banner = MutableLiveData<List<SliderModel>>()
     private val _category = MutableLiveData<List<CategoryModel>>()
     private val _bestSeller = MutableLiveData<MutableList<ItemsModel>>()
-
+    private val _atlets = MutableLiveData<MutableList<AtletModel>>()
 
     val banners: LiveData<List<SliderModel>> = _banner
     val category: LiveData<List<CategoryModel>> = _category
     val bestSeller: LiveData<MutableList<ItemsModel>> = _bestSeller
+    val atlets: LiveData<MutableList<AtletModel>> = _atlets
+
 
 
     val retrofit = Retrofit.Builder()
@@ -43,6 +48,34 @@ class MainViewModel {
     val bannerService = retrofit.create(BannerService::class.java)
     val categoryService = retrofit.create(CategoryService::class.java)
     val productService = retrofit.create(ProductService::class.java)
+    val atletService = retrofit.create(AtletService::class.java)
+
+
+    fun loadAtlets()  {
+        val atletList = mutableListOf<AtletModel>()
+        val call = atletService.getAtlets()
+        call.enqueue(object : Callback<List<Atlet>> {
+            override fun onResponse(call: Call<List<Atlet>>, response: Response<List<Atlet>>) {
+                if (response.isSuccessful) {
+                    val bannerList = response.body()
+                    bannerList?.let {
+
+                        for (atlet in atletList) {
+                            var atletModel = AtletModel(atlet.id,atlet.spor,atlet.name,atlet.imageUrl)
+                            atletList.add(atletModel)
+                        }
+                        _atlets.value = atletList
+                    }
+                } else {
+                    println("Error: ${response.code()} - ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<List<Atlet>>, t: Throwable) {
+                println("Network request failed: ${t.message}")
+            }
+        })
+    }
 
 
     fun loadBanners()  {

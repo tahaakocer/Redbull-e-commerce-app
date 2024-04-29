@@ -47,6 +47,10 @@ class ProductsActivity : AppCompatActivity() {
             startActivity(Intent(this@ProductsActivity,MainActivity::class.java))
 
         }
+        binding.athleteBtn.setOnClickListener{
+            startActivity(Intent(this@ProductsActivity,AthleteActivity::class.java))
+
+        }
     }
     private fun initBestSeller() {
         binding.progressBarBestSeller.visibility= View.VISIBLE
