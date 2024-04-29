@@ -13,4 +13,17 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+    <style name="Base.Theme.LibraryProject" parent="Theme.AppCompat">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/app_theme</item>
+    </style>
+
+    <style name="Theme.LibraryProject" parent="Base.Theme.LibraryProject" />
+
+    <style name="custom_card_view_style" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/custom_card_view</item>
+    </style>
+
+    <style name="custom_card_view" parent=""/>
 </resources>
