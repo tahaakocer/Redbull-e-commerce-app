@@ -2,7 +2,6 @@ package com.techtitans.ecommerce3.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project1762.Helper.ManagmentCart
 import com.techtitans.ecommerce3.Adapter.CartAdapter
