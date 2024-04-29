@@ -4,7 +4,7 @@
     <string name="app_name">Redbull</string>
     <string name="intro_signin">Already have an account?<font color="#008b86"> Sign In</font></string>
     <string name="greetingText">Welcome Back</string>
-    <string name="userNameEditText">Email or Username</string>
+    <string name="userNameEditText">İsim Soyisim</string>
     <string name="passwordEditText">Password</string>
     <string name="forgotPassword">Forgot Password?</string>
     <string name="signInButton">SIGN IN</string>

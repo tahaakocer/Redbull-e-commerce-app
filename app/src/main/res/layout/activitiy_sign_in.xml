@@ -47,7 +47,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/etUserName"
+                android:id="@+id/etEmail"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="32dp"
@@ -57,10 +57,9 @@
                 android:drawableTint="@color/app_theme"
                 android:ems="10"
                 android:fontFamily="@font/alata"
-                android:hint="@string/userNameEditText"
+                android:hint="Email"
                 android:inputType="text"
                 android:paddingStart="8dp"
-                android:text="alieser@gmail.com"
                 android:textColorHint="@color/app_theme"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -79,25 +78,10 @@
                 android:hint="@string/passwordEditText"
                 android:inputType="textPassword"
                 android:paddingStart="8dp"
-                android:text="121212"
                 android:textColorHint="@color/app_theme"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etUserName" />
-
-            <TextView
-                android:id="@+id/txtForgotPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="12dp"
-                android:fontFamily="@font/alata"
-                android:text="@string/forgotPassword"
-                android:textColor="@color/app_theme"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
             <Button
                 android:id="@+id/btnSignin"
@@ -107,7 +91,7 @@
                 android:layout_marginEnd="16dp"
                 android:backgroundTint="#FF004C"
                 android:fontFamily="@font/alata"
-                android:text="@string/signInButton"
+                android:text="Giriş Yap"
                 app:cornerRadius="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:fontFamily="@font/alata"
-                    android:text="@string/dontHaveAccountText"
+                    android:text="Hesabınız yok mu?"
                     android:textColor="#00174C"
                     android:textSize="16sp" />
 
@@ -141,7 +125,7 @@
                     android:clickable="true"
                     android:fontFamily="@font/alata"
                     android:onClick="signUpClicked"
-                    android:text="@string/createAccountText"
+                    android:text="Kaydol"
                     android:textColor="#00174C"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -156,7 +140,7 @@
         android:layout_height="83dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="@string/greetingText"
+        android:text="Tekrar Hoşgeldin"
         android:textColor="@color/white"
         android:textSize="26sp"
         android:textStyle="bold"
