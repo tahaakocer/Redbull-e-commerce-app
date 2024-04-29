@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.techtitans.ecommerce3.API.LoginService
+import com.techtitans.ecommerce3.Client.userConfig
 import com.techtitans.ecommerce3.Model.LoginResponse
 import com.techtitans.ecommerce3.databinding.ActivitiySignInBinding
 import retrofit2.Call
@@ -17,6 +18,7 @@ class SignInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitiySignInBinding
     private val BASE_URL = "http://93.95.26.208:8080/api/"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +49,7 @@ class SignInActivity : AppCompatActivity() {
                         if (response.isSuccessful) {
                             val loginResponse = response.body()
                             if (loginResponse != null && loginResponse.status) {
+
                                 Toast.makeText(this@SignInActivity, loginResponse.message, Toast.LENGTH_SHORT).show()
                                 startActivity(Intent(this@SignInActivity, MainActivity::class.java))
                                 finish()

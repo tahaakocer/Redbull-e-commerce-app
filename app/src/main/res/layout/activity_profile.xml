@@ -59,9 +59,7 @@
                 android:id="@+id/MyEmail"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="56dp"
+                android:layout_marginTop="60dp"
                 android:background="@drawable/rounded_corner"
                 android:drawablePadding="8dp"
                 android:fontFamily="@font/alata"
@@ -72,6 +70,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,47 +78,23 @@
                 android:id="@+id/MyAd"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginEnd="56dp"
-                android:layout_marginBottom="74dp"
+                android:layout_marginTop="72dp"
                 android:background="@drawable/rounded_corner"
                 android:drawablePadding="8dp"
                 android:fontFamily="@font/alata"
                 android:gravity="center"
                 android:paddingStart="8dp"
-                android:text="Ad:"
+                android:text="Ad Soyad:"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textIsSelectable="false"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/MySoyad"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/MyEmail"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/MyEmail"
                 app:layout_constraintTop_toBottomOf="@+id/MyEmail" />
-
-            <TextView
-                android:id="@+id/MySoyad"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="56dp"
-                android:layout_marginTop="74dp"
-                android:layout_marginEnd="55dp"
-                android:background="@drawable/rounded_corner"
-                android:drawablePadding="8dp"
-                android:fontFamily="@font/alata"
-                android:gravity="center"
-                android:paddingStart="8dp"
-                android:text="Soyad:"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/MyAd" />
 
             <TextView
                 android:id="@+id/mail"
@@ -134,7 +109,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="127dp"
-                android:layout_marginTop="60dp"
                 android:layout_marginEnd="127dp"
                 android:layout_marginBottom="69dp"
                 android:backgroundTint="#FF004C"
@@ -144,17 +118,19 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/MySoyad" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="24dp"
                 android:layout_height="31dp"
                 android:layout_marginStart="70dp"
-                android:layout_marginBottom="81dp"
-                app:layout_constraintBottom_toTopOf="@+id/MyAd"
+                app:layout_constraintBottom_toBottomOf="@+id/MyEmail"
+                app:layout_constraintEnd_toEndOf="@+id/MyEmail"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/MyEmail"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/email_icon" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

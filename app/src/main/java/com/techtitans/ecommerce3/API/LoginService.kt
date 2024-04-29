@@ -1,7 +1,6 @@
 package com.techtitans.ecommerce3.API
 
 import com.techtitans.ecommerce3.Model.LoginResponse
-import com.techtitans.ecommerce3.Model.UserModel
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response

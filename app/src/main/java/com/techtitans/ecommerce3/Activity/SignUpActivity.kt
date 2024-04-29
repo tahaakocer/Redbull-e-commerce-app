@@ -16,6 +16,8 @@ class SignUpActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignUpBinding
     private val BASE_URL = "http://93.95.26.208:8080/api/"
+    public var name =""
+    public var email=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
