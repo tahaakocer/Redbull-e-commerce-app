@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="#00174C">
+
+    <TextView
+        android:id="@+id/txtMyBasketTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="48dp"
+        android:text="Hesap Bilgilerim"
+        android:textColor="#CCCCCC"
+        android:textSize="26sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivMyAccount"
+        android:layout_width="192dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTintMode="add"
+        android:src="@drawable/redbull_logo_svgrepo_com"
+        app:layout_constraintBottom_toTopOf="@+id/cvMyAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMyBasketTitle"
+        app:srcCompat="@drawable/redbull_logo_svgrepo_com" />
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/cvMyAccount"
+        style="@style/custom_card_view_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMyAccount">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00174C">
+
+            <TextView
+                android:id="@+id/MyEmail"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="56dp"
+                android:background="@drawable/rounded_corner"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/alata"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/MyAd"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginBottom="74dp"
+                android:background="@drawable/rounded_corner"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/alata"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:text="Ad:"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textIsSelectable="false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/MySoyad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MyEmail" />
+
+            <TextView
+                android:id="@+id/MySoyad"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="74dp"
+                android:layout_marginEnd="55dp"
+                android:background="@drawable/rounded_corner"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/alata"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:text="Soyad:"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MyAd" />
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alata"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/quitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="127dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="127dp"
+                android:layout_marginBottom="69dp"
+                android:backgroundTint="#FF004C"
+                android:fontFamily="@font/alata"
+                android:text="Çıkış Yap"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MySoyad" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="24dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginBottom="81dp"
+                app:layout_constraintBottom_toTopOf="@+id/MyAd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/email_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtMyBasketTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

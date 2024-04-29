@@ -36,7 +36,7 @@
             <!-- Gerekli diğer özellikler -->
         </activity>
         <activity android:name=".Activity.SignUpActivity"  android:exported="false"/>
-        <activity android:name=".Activity.IntroActivity" android:exported="false">
+        <activity android:name=".Activity.ProfileActivity" android:exported="false">
 
             <!-- Gerekli diğer özellikler -->
         </activity>
