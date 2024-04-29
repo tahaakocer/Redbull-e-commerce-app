@@ -34,7 +34,7 @@ class AthleteActivity : BaseActivity() {
         }
 
         bottomNavigation()
-        initBestSeller()
+        initAthlete()
     }
 
     private fun bottomNavigation() {
@@ -50,7 +50,7 @@ class AthleteActivity : BaseActivity() {
 
         }
     }
-    private fun initBestSeller() {
+    private fun initAthlete() {
         binding.progressBarBestSeller.visibility= View.VISIBLE
         viewModel.atlets.observe(this, Observer {
             binding.viewBestSeller.layoutManager= GridLayoutManager(this,2)

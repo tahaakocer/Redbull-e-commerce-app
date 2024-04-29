@@ -34,6 +34,7 @@ class AthleteApadter(val items: MutableList<AtletModel>) :
     override fun onBindViewHolder(holder: AthleteApadter.Viewholder, position: Int) {
         holder.binding.sporTxt.text = items[position].spor
         holder.binding.nameTxt.text = items[position].name
+        println(items[position].imageUrl)
 
         val requestOption = RequestOptions().transform(CenterCrop())
         Glide.with(holder.itemView.context)

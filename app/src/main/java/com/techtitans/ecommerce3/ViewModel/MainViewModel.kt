@@ -60,8 +60,9 @@ class MainViewModel {
                     val bannerList = response.body()
                     bannerList?.let {
 
-                        for (atlet in atletList) {
+                        for (atlet in bannerList) {
                             var atletModel = AtletModel(atlet.id,atlet.spor,atlet.name,atlet.imageUrl)
+                            println(atlet.imageUrl)
                             atletList.add(atletModel)
                         }
                         _atlets.value = atletList
