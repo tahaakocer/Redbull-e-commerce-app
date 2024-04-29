@@ -2,10 +2,15 @@ package com.techtitans.ecommerce3.Activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
+import com.techtitans.ecommerce3.Adapter.AthleteApadter
+import com.techtitans.ecommerce3.Adapter.BestSellerAdapter
 import com.techtitans.ecommerce3.R
 import com.techtitans.ecommerce3.ViewModel.MainViewModel
 import com.techtitans.ecommerce3.databinding.ActivityAthleteBinding
@@ -29,6 +34,7 @@ class AthleteActivity : BaseActivity() {
         }
 
         bottomNavigation()
+        initBestSeller()
     }
 
     private fun bottomNavigation() {
@@ -43,6 +49,15 @@ class AthleteActivity : BaseActivity() {
             startActivity(Intent(this@AthleteActivity,MainActivity::class.java))
 
         }
-
     }
+    private fun initBestSeller() {
+        binding.progressBarBestSeller.visibility= View.VISIBLE
+        viewModel.atlets.observe(this, Observer {
+            binding.viewBestSeller.layoutManager= GridLayoutManager(this,2)
+            binding.viewBestSeller.adapter= AthleteApadter(it)
+            binding.progressBarBestSeller.visibility= View.GONE
+        })
+        viewModel.loadAtlets()
+    }
+
 }
